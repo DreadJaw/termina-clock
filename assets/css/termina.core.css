@@ -1,0 +1,69 @@
+@font-face { src: url(fonts/Triforce.ttf); font-family: 'Triforce'; }
+@font-face { src: url(fonts/HylianSerif.otf); font-family: 'Hylian'; }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+:root {
+    --color-green: rgb(71, 180, 61);
+    --color-dark-green: rgb(43, 116, 37);
+    --color-dark: rgb(30, 30, 30);
+    --color-light: rgb(233, 233, 233);
+    --color-black: rgb(0, 0, 0);
+    --color-white: rgb(255, 255, 255);
+}
+
+.font-hylian { font-family: 'Hylian' !important; }
+.font-triforce { font-family: 'Triforce' !important; }
+
+.display-clock {
+    display: table-cell;
+    vertical-align: middle;
+    background-image: url('../img/clock.png');
+    background-size: contain;
+    height: 500px;
+    width: 500px;
+}
+.rotate {
+    -webkit-animation: spin 60s linear infinite;
+    -moz-animation: spin 60s linear infinite;
+    animation: spin 60s linear infinite;
+}
+
+.text-primary { 
+    color: var(--color-green) !important; 
+}
+.text-light {
+    color: var(--color-light) !important;
+}
+.text-dark {
+    color: var(--color-dark) !important;
+}
+.text-link { 
+    color: var(--color-green) !important;
+    transition: all 0.2s;
+}
+.text-link:hover, .text-link:active { 
+    color: var(--color-dark-green) !important; 
+}
+
+.bg-light { background-color: var(--color-light) !important; }
+.bg-dark { background-color: var(--color-dark) !important; }
+.bg-primary { background-color: var(--color-green) !important; }
+.bg-faded { background-color: rgba(0, 0, 0, 0.7) !important; }
+
+.btn-primary {
+    background-color: var(--color-green) !important;
+    color: var(--color-light) !important;
+    border: 0 !important;
+    transition: all 0.2s;
+}
+.btn-primary:hover {
+    background-color: var(--color-dark-green) !important;
+    color: var(--color-light) !important;
+    border: 0 !important;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+}
+
+.box-shadow { box-shadow: 1px 1px 1px rgb(0, 0, 0) !important; }
+.text-shadow { text-shadow: 1px 1px 1px rgb(0, 0, 0) !important; }
